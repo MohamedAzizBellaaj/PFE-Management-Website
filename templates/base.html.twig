@@ -15,6 +15,16 @@
 	</head>
 	<body>
 		<div class="container">
+			<nav class="navbar navbar-expand navbar-light bg-light">
+				<div class="nav navbar-nav">
+					<a class="nav-item nav-link active" href={{ path('PFE.list') }}>Liste des entreprises
+						<span class="visually-hidden">(current)</span>
+					</a>
+					<a class="nav-item nav-link active" href={{ path('PFE.add') }}>Ajout de PFE
+						<span class="visually-hidden">(current)</span>
+					</a>
+				</div>
+			</nav>
 			{% for key,value in app.session.flashBag.get('welcome') %}
 				<div class="alert alert-info" role="alert">
 					{{value}}

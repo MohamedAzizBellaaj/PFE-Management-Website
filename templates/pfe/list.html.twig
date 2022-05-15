@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	PFE list
+{% endblock %}
+
+{% block body %}
+	<div class="row">
+		{% for entreprise in entrepriseList %}
+			<div class="card text-white bg-{% if(loop.index is odd) %}success{% else %}danger{% endif %} m-2 col-3" style="max-width: 18rem;">
+				<div class="card-header">{{ entreprise.name }}</div>
+				<div class="card-body">
+					<p class="card-text">Entreprise :
+						{{ entreprise.pFEs|length  }}
+						Pfe(s)
+					</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

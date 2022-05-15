@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{PFE.title}}
+{% endblock %}
+
+{% block body %}
+	<div class="card" style="width: 18rem;">
+		<div class="card-body">
+			<h5 class="card-title">Title :
+				{{PFE.title}}</h5>
+			<h4 class="card-title">Student :
+				{{PFE.name}}</h4>
+			<h3 class="card-title">Entreprise :
+				<br>
+				{{PFE.entreprise}}</h3>
+		</div>
+	</div>
+{% endblock %}
